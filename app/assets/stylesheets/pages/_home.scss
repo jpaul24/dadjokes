@@ -3,10 +3,15 @@
   height: 100vh;
   background: $yellow;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .joke-day {
-  margin-top: 80px;
+  margin-top: 120px;
+  border: 2px solid black;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
 }
