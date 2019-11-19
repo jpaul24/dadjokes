@@ -1,4 +1,6 @@
 class Joke < ApplicationRecord
-  belongs_to :user
+  validates :joke, presence: true, uniqueness: true
+
   has_many :comments, dependent: :destroy
+  belongs_to :user
 end
