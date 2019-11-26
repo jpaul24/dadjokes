@@ -1,4 +1,7 @@
 class FavouritesController < ApplicationController
+  def index
+  end
 
-  private
+  def new
+  end
 end
