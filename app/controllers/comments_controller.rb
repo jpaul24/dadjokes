@@ -1,13 +1,7 @@
 class CommentsController < ApplicationController
-
-  private
-
-  def set_comment
-    @comment = Comment.find(params[:id])
-    authorize @comment
+  def create
   end
 
-  def comment_params
-    params.require(:comment).permit(:comment, :user_id, :garden_id)
+  def new
   end
 end
