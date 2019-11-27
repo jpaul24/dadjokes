@@ -1,13 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/edit'
-  get 'users/show'
-  get 'favourites/index'
-  get 'favourites/new'
-  get 'comments/create'
-  get 'comments/new'
-  get 'jokes/index'
-  get 'jokes/show'
-  get 'jokes/new'
   devise_for :users
   root to: 'pages#home'
   resources :jokes do
