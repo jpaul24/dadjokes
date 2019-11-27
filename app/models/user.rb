@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :comments
   has_many :jokes
-  has_many :favourites
+  has_many :favourites, dependent: :destroy
 
   validates :username, presence: true
   validates :username, uniqueness: true
