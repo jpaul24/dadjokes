@@ -9,7 +9,7 @@ class JokesController < ApplicationController
 
   def new
     @joke = Joke.new
-    # authorize @joke
+    authorize @joke
   end
 
   def show
@@ -24,6 +24,12 @@ class JokesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def update
+    @joke.update(joke_params)
+    authorize @joke
+    redirect_to joke_path(@joke)
   end
 
   private
