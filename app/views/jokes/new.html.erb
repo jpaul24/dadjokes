@@ -1,2 +1,3 @@
-<h1>Jokes#new</h1>
-<p>Find me in app/views/jokes/new.html.erb</p>
+<% if policy(Joke).create? %>
+  <%= link_to "New joke", new_joke_path %>
+<% end %>

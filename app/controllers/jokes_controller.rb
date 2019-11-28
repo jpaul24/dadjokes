@@ -3,16 +3,34 @@ class JokesController < ApplicationController
   before_action :set_joke, only: [:show, :edit, :update, :destroy]
 
   def index
-    @jokes = policy_scope(Joke)
+    @jokes = policy_scope(Joke).order(created_at: :desc)
+    @jokes = Joke.all
+  end
+
+  def new
+    @joke = Joke.new
+    # authorize @joke
   end
 
   def show
   end
 
-  def new
+  def create
+    @joke = Joke.new
+    @joke.user = current_user
+    authorize @joke
+    if @joke.save
+      redirect_to joke_path(@joke)
+    else
+      render :new
+    end
   end
 
   private
+
+  def joke_params
+    params.require(:joke).permit(:joke, :user_id)
+  end
 
   def set_joke
     @joke = Joke.find(params[:id])
