@@ -6,12 +6,13 @@
 
 .jokes-header {
   height: 80px;
-  background-color: $light-blue;
+  background-color: black;
   display: flex;
   align-items: flex-end;
-  border-bottom: 3px solid rgba(30,30,30,0.8);
+  // border-bottom: 3px solid rgba(30,30,30,0.8);
   h1 {
-    color: rgba(40, 40, 40, 0.9);
+    // color: rgba(40, 40, 40, 0.9);
+    color: white;
     padding-left: 30px;
   }
 }
@@ -22,5 +23,6 @@
 
 .joke-image {
   width: 100%;
-  // height: 90vh;
+
+  object-fit: scale-down;
 }
