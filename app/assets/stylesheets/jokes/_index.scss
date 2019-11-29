@@ -1,7 +1,16 @@
+
+.app-container {
+  margin: 0 auto;
+  width: 90%;
+}
+
 .jokes-header {
   height: 80px;
   background-color: $light-blue;
+  display: flex;
+  align-items: flex-end;
   h1 {
     color: rgba(40, 40, 40, 0.9);
+    padding-left: 30px;
   }
 }
