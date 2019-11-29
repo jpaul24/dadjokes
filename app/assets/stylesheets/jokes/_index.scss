@@ -9,8 +9,13 @@
   background-color: $light-blue;
   display: flex;
   align-items: flex-end;
+  border-bottom: 3px solid rgb(30,30,30);
   h1 {
     color: rgba(40, 40, 40, 0.9);
     padding-left: 30px;
   }
+}
+
+.joke-card {
+
 }

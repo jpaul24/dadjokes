@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'jokes#index'
   resources :jokes do
     resources :comments, only: [:create]
     resources :favourites, only: [:new, :create]
