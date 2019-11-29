@@ -1,9 +1,9 @@
 <header class="jokes-header">
   <h1>The Jokes</h1>
 </header>
-<div class="app-container">
+<div>
   <div class="row">
-    <div class="col-12 col-md-9">
+    <div class="col-12 col-md-9 app-container">
       <% @jokes.each do |joke| %>
         <div class="joke-card">
           <% link_to joke_path(joke) do %>
@@ -12,8 +12,9 @@
         </div>
       <% end %>
     </div>
-    <div class="col-md-3 joke-image">
-
+    <div class="col-md-3">
+      <%= image_tag('dino-joke.jpg', class: "joke-image") %>
     </div>
   </div>
 </div>
+
