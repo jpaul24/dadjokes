@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update]
 
-  def edit
-  end
   def show
     @user = User.find(params[:id])
     authorize @user
