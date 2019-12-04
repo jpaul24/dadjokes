@@ -1,7 +1,12 @@
 class CommentsController < ApplicationController
-  def create
+  def new
+    @comment = Review.new
+    authorize @comment
   end
 
-  def new
+  private
+
+  def comment_params
+    params.require(:comment).permit(:joke_id, :user_id)
   end
 end
