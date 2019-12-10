@@ -1,3 +1,7 @@
 <% if policy(Joke).create? %>
   <%= link_to "New joke", new_joke_path %>
+  <%= simple_form_for @joke do |f| %>
+    <%= f.input :joke %>
+    <%= f.button :submit, "Add this joke", class: "btn btn-warning w-100" %>
+  <% end %>
 <% end %>

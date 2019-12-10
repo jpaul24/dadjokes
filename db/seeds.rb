@@ -9,7 +9,7 @@ User.destroy_all
 Joke.destroy_all
 
 puts "creating users"
-luke = User.create!(email: 'marc@gmail.com', password:'mypassword', username: 'ldawg')
+luke = User.create!(email: 'luke@gmail.com', password:'mypassword', username: 'ldawg')
 puts "users created"
 
 puts "creating jokes"
