@@ -13,6 +13,7 @@ class JokesController < ApplicationController
 
   def show
     @joke = Joke.find(params[:id])
+    authorize @joke
   end
 
   def create
@@ -27,8 +28,8 @@ class JokesController < ApplicationController
   end
 
   def update
-    @joke.update(joke_params)
     authorize @joke
+    @joke.update(joke_params)
     redirect_to joke_path(@joke)
   end
 
