@@ -3,7 +3,8 @@ class JokesController < ApplicationController
   before_action :set_joke, only: [:show, :edit, :update, :destroy]
 
   def index
-    @jokes = policy_scope(Joke)
+    @jokes = policy_scope(Joke).order(created_at: :desc)
+    # @jokes = Joke.all
   end
 
   def new

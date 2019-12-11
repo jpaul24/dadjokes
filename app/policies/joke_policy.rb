@@ -5,6 +5,10 @@ class JokePolicy < ApplicationPolicy
     end
   end
 
+  def new?
+    true
+  end
+
   def create?
     true
   end
@@ -18,6 +22,6 @@ class JokePolicy < ApplicationPolicy
   end
 
   def destroy?
-    record.user == user
+    update?
   end
 end
