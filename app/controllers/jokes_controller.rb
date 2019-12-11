@@ -16,7 +16,7 @@ class JokesController < ApplicationController
   end
 
   def create
-    @joke = Joke.new
+    @joke = Joke.new(joke_params)
     @joke.user = current_user
     authorize @joke
     if @joke.save
